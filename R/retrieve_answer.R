@@ -20,7 +20,7 @@ retrieve_answer <- function(option) {
     4 = select_solution(),
     5 = mutate_solution(),
     6 = flight_evaluation(),
-    7 = action,
+    7 = grouped_mutates_solution(),
     {
       print("Incorrect value, instead use a integer number
             between 1 - 7, to get a solution")
