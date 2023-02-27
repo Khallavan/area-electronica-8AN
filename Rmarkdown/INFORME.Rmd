@@ -207,4 +207,5 @@ Lo que se esperaría ver de la resta de estas dos variables es que debería dar 
 ## 2. Informes con Rmarkdown
 
 #### Función Mutate
-Esta función  en la transformación de datos es muy importante ya que con ella podemos 
+
+Esta función en la transformación de datos es muy importante ya que con ella podemos
