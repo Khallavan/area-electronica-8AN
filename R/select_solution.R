@@ -8,26 +8,11 @@
 
 library(tidyverse)
 library(nycflights13)
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 select_solution <- function() {
 
   # What happens if you include the name of a variable multiple times in a select() call?
   solution <- select(flights, year, day, year)
-=======
-select_solution <- function() {
-
-  # What happens if you include the name of a variable multiple times in a select() call?
-  solution <- select(flights, year, month, day, year)
->>>>>>> c57cc3f (Added select_solution script)
-=======
-
-select_solution <- function() {
-
-  # What happens if you include the name of a variable multiple times in a select() call?
-  solution <- select(flights, year, day, year)
->>>>>>> 6f1e886 (modified select_solution script)
   print("Item 2")
   print(solution)
 
