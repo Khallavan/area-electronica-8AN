@@ -1,9 +1,14 @@
 #' @title Prime Numbers list.
+<<<<<<< HEAD
 #' Gives the list of prime numbers between 1 to 100
 #' @returns A list of prime numbers between
 #' @example
 #' prime_numbers()
 
+=======
+#' @description  Gives the list of prime numbers between 1 to 100
+#' @returns a list of prime numbers
+>>>>>>> main
 prime_numbers <- function(){
   num <- 100L
   prime_nums <- c()
