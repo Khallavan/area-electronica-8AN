@@ -1,4 +1,4 @@
-#' @name GroupedMutates
+#' @name grouped_mutates_solution
 #' @title grouped_mutates_solution
 #' a solution for exercise 5.7.1 of r for Data Science
 #' @examples

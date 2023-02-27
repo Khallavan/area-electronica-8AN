@@ -1,4 +1,4 @@
-#' @name MutateMethod
+#' @name mutate_solution
 #' @title  mutate_solution
 #' mutate_solution() gives the solution for 5.5.2 items 1 and 2
 #' this method use mutate() method from dlpyr

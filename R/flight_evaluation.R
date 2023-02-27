@@ -1,4 +1,4 @@
-#' @name FlightEval
+#' @name flight_evaluation
 #' @title  flight_evaluation
 #' A solution for exercise 5.6.7 of R for Data Science
 #' @examples

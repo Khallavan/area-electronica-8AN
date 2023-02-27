@@ -1,4 +1,4 @@
-#' @name Main
+#' @name retrieve_answer
 #' @title retrieve_answer
 #' retrieve_answer() receive a parameter to return a solutions from chapter 5
 #' of R for Data Science book and a initial script for prime numbers

@@ -1,4 +1,4 @@
-#' @name arrangeSolution
+#' @name arrange_solution
 #' @title arrange_solution
 #' arrange_solution() gives the solution for all
 #' items of 5.3.1 exercise of R for Data Science
