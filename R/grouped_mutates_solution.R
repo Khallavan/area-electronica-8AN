@@ -14,7 +14,7 @@
   data("flights")
   head(flights)
 
-  grouped_mutates_solution <- funcion() {
+  grouped_mutates_solution <- function() {
     # item 2
 
     #part (1)
