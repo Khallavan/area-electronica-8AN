@@ -1,25 +1,12 @@
-<<<<<<< HEAD
 Package: classworkPackage
 Type: Package
-Title: What the Package Does (Title Case)
+Title: classworkPackage
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Authors: [ Javier Sebastian Morales Solano, Daniela Ducara Quesada, Diego Alejandro Palacios Cobaleda, Miguel Angel Chavez, Fernando Garcia Castillo]
+Maintainers: [ Javier Sebastian Morales Solano, Daniela Ducara Quesada, Diego Alejandro Palacios Cobaleda, Miguel Angel Chavez, Fernando Garcia Castillo]
+Description: A set of solutions for exercises of R for Data Science.
+    Specific the some items from five's chapter
 License: GPL-3.0
 Encoding: UTF-8
 LazyData: true
-=======
-Package: classworkPackage
-Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: GPL-3.0
-Encoding: UTF-8
-LazyData: true
->>>>>>> 34b6bdf0e48e33e04dcd5d3564f1574ce719bbaf
+RoxygenNote: 7.2.3
