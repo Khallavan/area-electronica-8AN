@@ -1,3 +1,6 @@
+#' @title Prime Numbers list.
+#' @description  Gives the list of prime numbers between 1 to 100
+#' @returns a list of prime numbers
 prime_numbers <- function(){
   num <- 100L
   prime_nums <- c()
@@ -16,7 +19,7 @@ prime_numbers <- function(){
       prime_nums <- c(prime_nums, i)
     }
   }
-  # print the prime numbers
+  # return the prime numbers
   return(prime_nums)
 }
 
