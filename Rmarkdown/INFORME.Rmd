@@ -1,0 +1,210 @@
+---
+title: "INFORME"
+author: "Daniela Ducuara"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+# Exploración y Aplicación de R para Data Science
+
+## 1. Codificación básica en R.
+
+1.  Realizamos un Script en R en donde se imprimen los números primos del 1 al 100. A continuación se muestra el desarrollo del código:
+
+```{r }
+
+```
+
+## 2. Paquete Tidyverse
+
+Tidyverse es un paquete en R, que esta diseñado para ayudar en el proceso de transformación de datos. Esto es algo muy útil en la ciencia de datos ya que nos ayuda a realizar un análisis y manipulación de los datos cuando se requiera.(Rafa, 2020).
+
+Ahora vamos a mostrar como se debe realizar la instalación del paquete en RStudio. Primero debemos ir a Tools y en la opción de Install Packages como se muestra en la imagen:
+
+![](Captur1a1.png)
+
+Después de seleccionar esta opción nos sale la siguiente ventana, y en la casilla debemos escribir Tidyverse, y tener seleccionada la casilla de install Dependencies, y le indicamos en Install.
+
+![](captura2.png)
+
+Cuando se haya instalado nos aparecera un mensaje en la consola:
+
+![](captura3.png)
+
+Una vez instalado el paquete, en el nuevo Script debemos cargar la libreria para que podamos usar las funciones del paquete.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(nycflights13)
+library(tidyverse) #se cargan las librerias
+
+
+```
+
+Ya cargada la librería podemos empezar a usar las funciones. Para este caso vamos a usar el paquete dplyr, que es otro miembro central de Tidyverse. Se carga también el paquete de nycflights13 en donde nos muestra un marco de base de datos de 336.776 vuelos que se registraron en 2013 que partieron desde la ciudad de New York. Con este marco de datos empezaremos a usar las funciones que son claves para realizar la manipulación de los datos mostrando algunos ejemplos.(Wickham,H. Grolemund,G).
+
+```{r}
+nycflights13::flights
+```
+
+1.  **Función Filter**, Usando la función de filtrer realizar los siguientes ejercicios:
+
+-   Encontrar los vuelos que tuvieron retraso de llegada de dos o mas horas
+
+```{r}
+library(tidyverse)
+library(nycflights13) #se cargan las librerias
+filter(flights,arr_delay>=120)
+
+```
+
+-   Vuelos con destino a ( IAHo HOU)
+
+```{r}
+filter(flights,dest =="IAH" | dest== "HOU")
+```
+
+-   Fueron operados por United, American o Delta
+
+```{r, echo=TRUE}
+filter (flights, carrier =="DL" | carrier=="UA" | carrier =="AA" )
+
+```
+
+-   Salida en verano (julio, agosto y septiembre)
+
+```{r, echo=TRUE}
+filter( flights, month %in% c(7,8,9))
+
+```
+
+-   Llegó más de dos horas tarde, pero no se fue
+
+```{r, echo=TRUE}
+filter (flights, dep_delay <=0 & arr_delay>120)
+```
+
+-   Se retrasaron al menos una hora, pero recuperaron más de 30 minutos en vuelo
+
+```{r, echo=TRUE}
+filter(flights, dep_delay>=60)
+```
+
+-   Salida entre la medianoche y las 6 a. m.
+
+```{r, echo=TRUE}
+filter (flights, hour>=0 & hour<=6)
+```
+
+-   Otro útil ayudante de filtrado de dplyr es between(). ¿Qué hace? ¿Puedes usarlo para simplificar el código necesario para responder a los desafíos anteriores?
+
+```{r, echo=TRUE}
+filter(flights,between(hour,0,6))
+filter(flights,between(month,7,9))
+```
+
+La función between sirve cuando queremos realizar un filtrado de una variable entre algunos valores, lo que se le da son limites hacia la derecha o izquierda, como en el ejemplo, en el que se filtra la variable hour, entre las 0 y 6 horas y el mes entre el mes de Julio y septiembre.
+
+2.  **Función Arrange**, realizar los siguientes ejercicios:
+
+-   ¿ Cómo podría utilizar arrange()para ordenar todos los valores que faltan al principio? (Sugerencia: use is.na()).
+
+```{r, echo=TRUE}
+arrange(flights,desc(is.na(dep_time)))
+```
+
+-   Ordenar flights para encontrar los vuelos más retrasados. Encuentra los vuelos que salieron antes.
+
+```{r, echo=TRUE}
+arrange(flights, desc(dep_delay))
+
+```
+
+```{r, echo=TRUE}
+arrange(flights, dep_delay)
+```
+
+-   Ordenar flights para encontrar los vuelos más rápidos (velocidad más alta).
+
+```{r, echo=TRUE}
+arrange (flights, desc(distance/air_time))
+```
+
+-   ¿Qué vuelos viajaron más lejos?, ¿Cuál viajó menos?
+
+```{r, echo=TRUE}
+arrange(flights, desc(distance))
+arrange(flights, distance)
+```
+
+3.  **Función Select**, Realizar los siguientes ejercicios
+
+-   Qué sucede si incluye el nombre de una variable varias veces en una select()llamada?
+
+```{r, echo=TRUE}
+select(flights, dest,dest,dest,dest)
+```
+
+-   Qué hace la any_of()función? ¿Por qué podría ser útil junto con este vector?
+
+```{r, echo=TRUE, message=TRUE}
+vars <- c("year", "month", "day", "dep_delay", "arr_delay")
+
+```
+
+-   ¿Te sorprende el resultado de ejecutar el siguiente código? ¿Cómo tratan los ayudantes selectos el caso de forma predeterminada? ¿Cómo se puede cambiar ese valor predeterminado?
+
+```{r, echo=TRUE}
+select(flights, contains("TIME"))
+```
+
+3.  **Función Mutate y Transmutate**, Realizar lo siguientes ejercicios
+
+-   Actualmente dep_timey sched_dep_timeson convenientes a la vista, pero difíciles de calcular porque en realidad no son números continuos. Conviértalos a una representación más conveniente de la cantidad de minutos desde la medianoche.
+
+```{r, echo=TRUE}
+transmute(flights, dep_time, hour = dep_time%/%100,
+                     minute = dep_time%%100, 
+                     sched_dep_time, 
+                     Hour = sched_dep_time%/%100,
+                     Minute = sched_dep_time%%100)
+```
+
+-   Comparar air_time con arr_time - dep_time. Que esperas ver? ¿Que ves? ¿Qué necesitas hacer para arreglarlo?
+
+```{r, echo=TRUE}
+transmute(flights, air_time,arr_time, dep_time, time = arr_time-dep_time)
+```
+
+Lo que se esperaría ver de la resta de estas dos variables es que debería dar el tiempo que duro el vuelo
+
+4.  **Función Summarise**, Haga una lluvia de ideas sobre al menos 5 formas diferentes de evaluar las características típicas de retraso de un grupo de vuelos. Considere los siguientes escenarios:
+
+-   Un vuelo llega 15 minutos antes el 50% del tiempo y 15 minutos tarde el 50% del tiempo.
+
+```{r, echo=TRUE}
+
+```
+
+-   Un vuelo siempre llega 10 minutos tarde.
+
+```{r, echo=TRUE}
+
+```
+
+-   Un vuelo llega 30 minutos antes el 50% del tiempo y 30 minutos tarde el 50% del tiempo.
+
+```{r,echo=TRUE}
+
+```
+
+-   El 99% de las veces un vuelo es puntual. El 1% de las veces llega 2 horas tarde.
+
+```{r, echo=TRUE}
+
+```
+
+## 2. Informes con Rmarkdown
+
+#### Función Mutate
+Esta función  en la transformación de datos es muy importante ya que con ella podemos 
