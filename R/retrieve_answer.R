@@ -1,6 +1,6 @@
 #' @title retrieve_answer
-#' retrieve_answer receive a parameter to return a solution from chapters 5
-#' of R for Data Science book and a inital script for prime numbers
+#' retrieve_answer() receive a parameter to return a solutions from chapter 5
+#' of R for Data Science book and a initial script for prime numbers
 #' @param option A integer number
 #' @examples
 #' retrieve_answer(1)
@@ -17,7 +17,7 @@ retrieve_answer <- function(option) {
     1 = prime_numbers(),
     2 = filter_solution(),
     3 = arrange_solution(),
-    4 = action,
+    4 = select_solution(),
     5 = action,
     6 = action,
     7 = action,

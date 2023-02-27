@@ -1,6 +1,7 @@
 #'  @title arrange_solution
 #'  arrange_solution() gives the solution for all
 #'  items of 5.3.1 exercise of R for Data Science
+#'  employing the arrange method of dplyr
 #'  @example
 #'  arrange_solution()
 
