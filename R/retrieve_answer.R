@@ -14,13 +14,13 @@
 library(classworkPackage)
 retrieve_answer <- function(option) {
   switch (option,
-          1 = prime_numbers(),
-          2 = filter_solution(),
-          3 = arrange_solution(),
-          4 = select_solution(),
-          5 = mutate_solution(),
-          6 = flight_evaluation(),
-          7 = grouped_mutates_solution(),
+          1 = {prime_numbers()},
+          2 = {filter_solution()},
+          3 = {arrange_solution()},
+          4 = {select_solution()},
+          5 = {mutate_solution()},
+          6 = {flight_evaluation()},
+          7 = {grouped_mutates_solution()},
           {
             print("Incorrect value, instead use a integer number
             between 1 - 7, to get a solution")
