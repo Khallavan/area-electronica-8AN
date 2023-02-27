@@ -2,11 +2,9 @@
 #' @title  mutate_solution
 #' mutate_solution() gives the solution for 5.5.2 items 1 and 2
 #' this method use mutate() method from dlpyr
-#' @method time_converter_mins
+#' @method time_converter_mins method
 #' @description  converts time into minutes considering a 24h mins range
-#' @examples
-#' mutate_solution()
-#' prints the solution in data frames
+
 
 library(tidyverse)
 library(nycflights13)
