@@ -14,9 +14,9 @@
   data("flights")
   head(flights)
 
-  grouped_mutates_solution <- funcion() 
+  grouped_mutates_solution <- funcion() {
     # item 2
-  
+
     #part (1)
     table <- flights %>%
     filter(!is.na(tailnum)) %>%
@@ -25,7 +25,7 @@
     summarise(on_time = mean(on_time), n = n()) %>%
     filter(min_rank(on_time) == 1)
     print(table)
-    
+
     part_1 <-flights %>%
     filter(!is.na(tailnum), is.na(arr_time) | !is.na(arr_delay)) %>%
     mutate(on_time = !is.na(arr_time) & (arr_delay <= 0)) %>%
@@ -34,7 +34,7 @@
     filter(n >= 20) %>%
     filter(min_rank(on_time) == 1)
     print(part_1)
-    
+
     #part(2)
     part_2 <- flights %>%
     filter(!is.na(arr_delay)) %>%
@@ -43,8 +43,8 @@
     filter(n >= 20) %>%
     filter(min_rank(desc(arr_delay)) == 1)
     print(part_2)
-  
 
+}
 
 
 
