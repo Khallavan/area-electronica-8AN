@@ -1,6 +1,7 @@
+#' @name GroupedMutates
 #' @title grouped_mutates_solution
 #' a solution for exercise 5.7.1 of r for Data Science
-#' @example
+#' @examples
 #' grouped_mutates_solution()
 #' prints the solution in data frames
 #' For this item of the exercise, two cases can be presented:

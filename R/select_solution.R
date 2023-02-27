@@ -1,3 +1,4 @@
+#' @name SelectMethod
 #' @title select_solution
 #' select_solution() gives the solution for 5.4.1 Items 2, 3 and 4
 #' employing the select method from dplyr.

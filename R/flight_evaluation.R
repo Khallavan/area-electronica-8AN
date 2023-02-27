@@ -1,6 +1,7 @@
+#' @name FlightEval
 #' @title  flight_evaluation
 #' A solution for exercise 5.6.7 of R for Data Science
-#' @example
+#' @examples
 #' flight_evaluation()
 #' prints 5 different ways to evaluate the Typical Delay Characteristics of a group of flights.
 

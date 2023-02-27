@@ -1,3 +1,4 @@
+#' @name PrimeNumbers
 #' @title Prime Numbers list.
 #' Gives the list of prime numbers between 1 to 100
 #' @returns A list of prime numbers between

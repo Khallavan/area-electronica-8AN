@@ -1,3 +1,4 @@
+#' @name Main
 #' @title retrieve_answer
 #' retrieve_answer() receive a parameter to return a solutions from chapter 5
 #' of R for Data Science book and a initial script for prime numbers
@@ -10,8 +11,7 @@
 #' retrieve_answer(5)
 #' retrieve_answer(6)
 #' retrieve_answer(7)
-
-library(classworkPackage)
+#'
 retrieve_answer <- function(option) {
   if (option == 1){prime_numbers()}
   else if (option == 2){filter_solution()}
