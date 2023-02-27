@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Package: classworkPackage
 Type: Package
 Title: What the Package Does (Title Case)
@@ -9,3 +10,16 @@ Description: More about what it does (maybe more than one line)
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+=======
+Package: classworkPackage
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Author: Who wrote it
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: GPL-3.0
+Encoding: UTF-8
+LazyData: true
+>>>>>>> 3b2d3ad3012304ef6314e123baf4716bb01a4915
