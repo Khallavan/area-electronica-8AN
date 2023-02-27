@@ -1,6 +1,6 @@
 #' @title  filter_solution
 #' A solution for exercise 5.2.4 of R for Data Science
-#' prints the solution in data frames
+#' employing the filter method from dplyr.
 #' @example
 #' filter_solution()
 
