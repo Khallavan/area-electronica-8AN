@@ -18,8 +18,8 @@ retrieve_answer <- function(option) {
     2 = filter_solution(),
     3 = arrange_solution(),
     4 = select_solution(),
-    5 = action,
-    6 = action,
+    5 = mutate_solution(),
+    6 = flight_evaluation(),
     7 = action,
     {
       print("Incorrect value, instead use a integer number
