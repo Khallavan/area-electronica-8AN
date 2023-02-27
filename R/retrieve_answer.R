@@ -1,6 +1,6 @@
 #' @title retrieve_answer
 #' retrieve_answer receive a parameter to return a solution from chapters 5
-#' of R for Data Science book
+#' of R for Data Science book and a inital script for prime numbers
 #' @param option A integer number
 #' @examples
 #' retrieve_answer(1)
